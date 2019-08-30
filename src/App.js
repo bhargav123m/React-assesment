@@ -42,37 +42,10 @@ class App extends Component {
 
   onRoomUncheck = number => {
     let updatedRooms = this.state.rooms.slice().reverse();
-    let counter = 0;
-    switch (number) {
-      case '2':
-        for (let i = 0; i < updatedRooms.length - 1; i++) {
-          if (updatedRooms[i]) {
-            break;
-          } else {
-            counter++;
-          }
-        }
-        if (counter === 2) {
-          if (updatedRooms[updatedRooms.length - 1])
-            updatedRooms[updatedRooms.length - 1] = false;
-        }
-        break;
-      case '3':
-        for (let i = 0; i < updatedRooms.length - 2; i++) {
-          if (updatedRooms[i]) {
-            break;
-          } else {
-            counter++;
-          }
-        }
-        if (counter === 1) {
-          if (updatedRooms[updatedRooms.length - 2])
-            updatedRooms[updatedRooms.length - 2] = false;
-        }
-        break;
-      case '4':
-        if (updatedRooms[0]) updatedRooms[0] = false;
+    for (let i = 0; i <= updatedRooms.length - parseInt(number) + 1; i++) {
+      updatedRooms[i] = false;
     }
+
     this.setState({
       rooms: updatedRooms.reverse()
     });
