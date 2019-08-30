@@ -50,11 +50,33 @@ class Room extends Component {
   };
 
   onDataSubmitted = () => {
-    let data = {
-      adults: this.state.adults,
-      children: this.state.children
-    };
-    sessionStorage.setItem(`room ${this.props.number}`, JSON.stringify(data));
+    if (
+      this.state.enabled &&
+      (this.state.adults === '' && this.state.children === '')
+    ) {
+      this.setState(
+        {
+          adults: 1,
+          children: 0
+        },
+        () => {
+          let data = {
+            adults: this.state.adults,
+            children: this.state.children
+          };
+          sessionStorage.setItem(
+            `room ${this.props.number}`,
+            JSON.stringify(data)
+          );
+        }
+      );
+    } else {
+      let data = {
+        adults: this.state.adults,
+        children: this.state.children
+      };
+      sessionStorage.setItem(`room ${this.props.number}`, JSON.stringify(data));
+    }
   };
 
   render() {
