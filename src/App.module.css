@@ -1,0 +1,21 @@
+.Presentations {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Submit {
+    display: flex;
+    justify-content: center;
+    margin: 0 2rem;
+    background: #88d9f3;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    border: 1px solid #33e1ed;
+}
+
+.Submit:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    background: #9acb34;
+    border: 1px solid #82de3a;
+}

@@ -1,0 +1,44 @@
+.Room {
+    background: #edf4ea;
+    padding: 0.5rem;
+    border-radius: 0.6rem;
+    flex: 1 1 0;
+    margin: 1rem 0.5rem;
+    border: 1px solid #c9d4c5;
+}
+
+.RoomSelected {
+    background: #062639;
+    padding: 0.5rem;
+    border-radius: 0.6rem;
+    flex: 1 1 0;
+    margin: 1rem 0.5rem;
+}
+
+.Header {
+    display: flex;
+    align-items: baseline;
+    padding-bottom: 0.5rem;
+}
+
+.RoomSelected .Header {
+    color: #edf4ea;
+}
+
+p {
+    margin: 0 0 0.4rem 0;
+}
+
+.Body {
+    display: flex;
+    justify-content: space-evenly;
+    background: white;
+    border: 1px solid ghostwhite;
+    border-radius: 0.6rem;
+    padding: 0.7rem 0;
+}
+
+.Content {
+    display: flex;
+    flex-direction: column;
+}
